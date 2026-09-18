@@ -1,18 +1,22 @@
-import { Text, View, StyleSheet } from "react-native";
+import React from "react";
+import { View, Text } from "react-native";
+import Card from "../../Component/Card";
 
-export default function Index() {
+export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+    <View>
+      <Card
+        title="React Native"
+        subHeader="Mobile Development"
+        color="#ffffff"
+        width={350}
+        orientation="vertical"
+        inset={true}
+        onPress={() => console.log("Card pressed")}
+      >
+        <Text>Learn how to build mobile applications.</Text>
+        <Text>Press the card to learn more.</Text>
+      </Card>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  
-});
